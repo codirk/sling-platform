@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>de.messetat.sling.platform.parent</groupId>
+        <artifactId>sling-parent</artifactId>
+        <version>11-SNAPSHOT</version>
+    </parent>
+
+    <groupId>de.messetat.sling.platform</groupId>
+    <artifactId>sling-platform-bundle</artifactId>
+    <!--
+    <version>1.0-SNAPSHOT</version>
+    -->
+
+    <description>
+        https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html
+    </description>
+
+    <packaging>bundle</packaging>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>maven-sling-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+
+                        <Embed-Dependency>*</Embed-Dependency>
+                        <Export-Package>*</Export-Package>
+                        <Bundle-SymbolicName>${pom.artifactId}</Bundle-SymbolicName>
+                        <!--
+                        <Private-Package>org.apache.felix.log.impl</Private-Package>
+                        <Bundle-Activator>${pom.artifactId}.impl.Activator</Bundle-Activator>
+                        <Export-Service>org.osgi.service.log.LogService,org.osgi.service.log.LogReaderService</Export-Service>
+                        -->
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.tracer</artifactId>
+            <!--
+            <version>1.0.6</version>
+            -->
+            <!-- this is needed for aem sync-->
+            <!--aem version>1.0.2</version-->
+        </dependency>
+
+
+
+
+        <dependency>
+            <!-- needed by org.apache.sling.servlets.compat -->
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.commons.json</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.query</artifactId>
+        </dependency>
+
+
+        <!--
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.webconsole.plugins.scriptconsole</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.everit.osgi.bundles</groupId>
+            <artifactId>org.everit.osgi.bundles.org.json</artifactId>
+            <version>1.0.0-v20140107</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>2.1.6</version>
+        </dependency>
+        -->
+
+        <!-- see https://sling.apache.org/documentation/bundles/sling-health-check-tool.html -->
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.hc.core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.hc.webconsole</artifactId>
+        </dependency>
+
+        <!--
+        <dependency>
+            <artifactId>httpcore-nio</artifactId>
+            <version>4.4.8</version>
+            <groupId>org.apache.httpcomponents</groupId>
+        </dependency>
+        -->
+    </dependencies>
+</project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+	<primaryNodeType>sling:OsgiConfig</primaryNodeType>
+
+	<property>
+		<name>enabled</name>
+		<type>Boolean</type>
+		<value>true</value>
+	</property>
+	<property>
+		<name>servletEnabled</name>
+		<type>Boolean</type>
+		<value>true</value>
+	</property>
+</node>
+<!-- 
+JCR SystemView format see https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html
+for more information.
+ -->

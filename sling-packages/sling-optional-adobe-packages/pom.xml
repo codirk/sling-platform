@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>sling.messetat.de</groupId>
+        <artifactId>sling-parent</artifactId>
+        <version>9.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>de.messetat.sling.additional</groupId>
+    <artifactId>sling-additional-adobe-package</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>content-package</packaging>
+
+
+    <!-- ************************************************************* -->
+    <!-- B U I L D -->
+    <!-- ************************************************************* -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.day.jcr.vault</groupId>
+                <artifactId>content-package-maven-plugin</artifactId>
+                <version>1.0.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.jackrabbit</groupId>
+                <artifactId>filevault-package-maven-plugin</artifactId>
+                <version>1.1.4</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <packageType>container</packageType>
+                    <group>${groupId}</group>
+                    <!--
+                    <filterSource>src/main/content/META-INF/vault/filter.xml</filterSource>
+                    -->
+                    <filters>
+                        <filter>
+                            <root>/apps/platform-libs/install</root>
+                            <mode>replace</mode>
+                        </filter>
+                    </filters>
+                    <properties>
+                        <acHandling>Merge</acHandling>
+                    </properties>
+                    <embeddeds>
+                        <embedded>
+                            <groupId>com.adobe.granite</groupId>
+                            <artifactId>com.adobe.granite.jmx</artifactId>
+                            <target>/apps/platform-libs/install</target>
+                        </embedded>
+                        <!--
+                        <embedded>
+                            <groupId>com.adobe.granite</groupId>
+                            <artifactId>com.adobe.granite.crxde-lite</artifactId>
+                            <target>/apps/platform-libs/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.adobe.granite</groupId>
+                            <artifactId>com.adobe.granite.i18n</artifactId>
+                            <target>/apps/platform-libs/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.day.cq</groupId>
+                            <artifactId>cq-i18n</artifactId>
+                            <target>/apps/platform-libs/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.day.commons</groupId>
+                            <artifactId>day-commons-text</artifactId>
+                            <target>/apps/platform-libs/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.day.cq</groupId>
+                            <artifactId>cq-replication</artifactId>
+                            <target>/apps/platform-libs/install</target>
+                        </embedded>
+                        -->
+                    </embeddeds>
+                    <!--
+                    <subPackages>
+                        <subPackage>
+                            <groupId>com.adobe.cq</groupId>
+                            <artifactId>core.wcm.components.all</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                    </subPackages>
+                    -->
+                    <finalName>030_${project.artifactId}-${project.version}</finalName>
+                </configuration>
+
+            </plugin>
+        </plugins>
+    </build>
+
+
+    <dependencies>
+        <!--
+                <dependency>
+                    <groupId>com.adobe.cq</groupId>
+                    <artifactId>core.wcm.components.all</artifactId>
+                    <type>zip</type>
+                </dependency>
+        -->
+
+        <dependency>
+            <groupId>com.adobe.granite</groupId>
+            <artifactId>com.adobe.granite.jmx</artifactId>
+            <version>0.2.6</version>
+        </dependency>
+
+
+        <!-- com.day.cq.replication,version=[5.5.0,6)  Cannot be resolved -->
+        <!--
+        <dependency>
+            <groupId>com.adobe.granite</groupId>
+            <artifactId>com.adobe.granite.crxde-lite</artifactId>
+            <version>1.0.52</version>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq</groupId>
+            <artifactId>cq-replication</artifactId>
+            <version>5.2.24</version>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq</groupId>
+            <artifactId>cq-search</artifactId>
+            <version>5.10.10</version>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.granite</groupId>
+            <artifactId>com.adobe.granite.crx-packagemgr</artifactId>
+            <version>1.0.32</version>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.granite</groupId>
+            <artifactId>com.adobe.granite.i18n</artifactId>
+            <version>5.5.8</version>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq</groupId>
+            <artifactId>cq-i18n</artifactId>
+            <version>5.4.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.day.commons</groupId>
+            <artifactId>day-commons-text</artifactId>
+            <version>1.1.8</version>
+        </dependency>
+        -->
+
+        <!-- adobe bundles -->
+        <!-- <dependency><groupId>com.adobe.granite</groupId><artifactId>com.adobe.granite.jmx</artifactId>
+            <version>0.2.6</version></dependency> -->
+
+        <!-- <dependency> <groupId>com.day.cq</groupId> <artifactId>cq-search</artifactId>
+            <version>5.8.24</version> </dependency> -->
+        <!-- unresolved dependencies com.adobe.granite.i18n,version=[1.0.0,2) Cannot
+            be resolved com.day.cq.i18n,version=[5.4.0,6) Cannot be resolved com.day.cq.replication,version=[5.5.0,6)
+            Cannot be resolved com.day.text,version=[1.1.4,2) Cannot be resolved -->
+        <!-- <dependency> <groupId>com.adobe.granite</groupId> <artifactId>com.adobe.granite.crxde-lite</artifactId>
+            <version>1.0.52</version> </dependency> -->
+        <!-- <dependency> <groupId>com.adobe.granite</groupId> <artifactId>com.adobe.granite.crx-packagemgr</artifactId>
+            <version>1.0.32</version> </dependency> -->
+
+        <!-- the following artifacts are provided by org.apache.sling.launchpad
+            but needed to compile the sources -->
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>adobe</id>
+            <name>Adobe Proxy Repository</name>
+            <url>http://repo.adobe.com/nexus/content/groups/public</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>central</id>
+            <name>Adobe Proxy Repository</name>
+            <url>https://repo1.maven.org/maven2</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+
+</project>

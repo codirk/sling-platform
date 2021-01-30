@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+>
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>de.messetat.sling.platform.parent</groupId>
+        <artifactId>sling-parent</artifactId>
+        <version>11-SNAPSHOT</version>
+    </parent>
+
+    <groupId>de.messetat.sling.core.components</groupId>
+    <artifactId>sling-core.components</artifactId>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>sling-core.components-bundle</module>
+        <module>sling-core.components-bundle-src</module>
+        <module>sling-core.components-package</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>de.messetat.sling.core.components</groupId>
+                <artifactId>sling-core.components-bundle</artifactId>
+                <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.messetat.sling.core.components</groupId>
+                <artifactId>sling-core.components-bundle-src</artifactId>
+                <version>${version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>de.messetat.sling.platform.parent</groupId>
+        <artifactId>sling-parent-dependencies-src</artifactId>
+        <version>11-SNAPSHOT</version>
+        <relativePath>../../../sling-parent/sling-parent-dependencies/sling-parent-dependencies-scr</relativePath>
+    </parent>
+
+    <groupId>de.messetat.sling.core.components</groupId>
+    <artifactId>sling-core.components-bundle-src</artifactId>
+    <!--
+    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
+    -->
+
+
+    <description>
+        https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html
+    </description>
+
+    <packaging>bundle</packaging>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <!--
+                         <Embed-Dependency>*</Embed-Dependency>
+                         <Export-Package>*</Export-Package>
+                         <Sling-Model-Packages>
+                          ${pom.groupId}.models,
+                          ${pom.groupId}.modelsexporter
+                         </Sling-Model-Packages>
+                         <Private-Package>org.apache.felix.log.impl</Private-Package>
+                         <Bundle-Activator>${pom.groupId}.impl.Activator</Bundle-Activator>
+                         <Export-Service>org.osgi.service.log.LogService,org.osgi.service.log.LogReaderService</Export-Service>
+                        -->
+                    </instructions>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+
+    <dependencies>
+
+        <!--
+        -->
+    </dependencies>
+</project>

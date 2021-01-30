@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>de.messetat.sling.platform</groupId>
+        <artifactId>sling-parent-dependencyManagement</artifactId>
+        <version>11-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>sling-parent-platform-dependencies</artifactId>
+
+
+    <packaging>pom</packaging>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.tracer</artifactId>
+                <version>1.0.6</version>
+                <!-- this is needed for aem sync-->
+                <!--aem version>1.0.2</version-->
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.pipes</artifactId>
+                <version>2.0.2</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.query</artifactId>
+                <version>4.0.2</version>
+                <scope>provided</scope>
+            </dependency>
+
+			<!--
+			<scope>provided</scope> ???
+			-->
+
+            <dependency>
+                <!--
+                org.apache.sling.servlets.compat.impl.JsonQueryServlet
+                -->
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.servlets.compat</artifactId>
+                <version>1.0.2</version>
+            </dependency>
+            <dependency>
+                <!-- needed by org.apache.sling.servlets.compat -->
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.commons.json</artifactId>
+                <version>2.0.20</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>2.11.2</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>2.11.2</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>2.11.2</version>
+            </dependency>
+
+
+
+            <!--
+            <dependency>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.apache.felix.webconsole.plugins.scriptconsole</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.everit.osgi.bundles</groupId>
+                <artifactId>org.everit.osgi.bundles.org.json</artifactId>
+                <version>1.0.0-v20140107</version>
+            </dependency>
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy-all</artifactId>
+                <version>2.1.6</version>
+            </dependency>
+            -->
+
+
+            <!-- see https://sling.apache.org/documentation/bundles/sling-health-check-tool.html -->
+            <dependency>
+                <!-- The only required bundle is org.apache.sling.hc.core which provides
+                    the API, some utility classes and some generally useful HealthCheck services. -->
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.hc.core</artifactId>
+                <version>1.2.4</version>
+            </dependency>
+
+            <!-- TODO org.apache.sling.hc.support provides more Sling-specific HealthCheck
+                services. -->
+            <dependency>
+                <!-- maybe to an packge /install -->
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.hc.webconsole</artifactId>
+                <version>1.1.2</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

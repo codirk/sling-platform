@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+>
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>de.messetat.sling.platform.parent</groupId>
+        <artifactId>sling-parent</artifactId>
+        <version>11-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>sling-platform-config</artifactId>
+
+    <packaging>content-package</packaging>
+
+
+    <!-- ************************************************************* -->
+    <!-- B U I L D -->
+    <!-- ************************************************************* -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.day.jcr.vault</groupId>
+                <artifactId>content-package-maven-plugin</artifactId>
+                <!--version>1.0.2</version-->
+            </plugin>
+            <plugin>
+                <groupId>org.apache.jackrabbit</groupId>
+                <artifactId>filevault-package-maven-plugin</artifactId>
+                <!--version>1.1.4</version-->
+                <extensions>true</extensions>
+                <configuration>
+                    <packageType>container</packageType>
+                    <group>${groupId}</group>
+                    <!--
+                    <filterSource>src/main/content/META-INF/vault/filter.xml</filterSource>
+                    -->
+                    <filters>
+                        <filter>
+                            <root>/apps/${artifactId}/config</root>
+                            <mode>replace</mode>
+                        </filter>
+                    </filters>
+                    <!--properties>
+                        <acHandling>Merge</acHandling>
+                    </properties-->
+                    <finalName>030_${project.artifactId}-${project.version}</finalName>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

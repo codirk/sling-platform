@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+	<groupId>de.messetat.sling.platform</groupId>
+    <artifactId>base-pom</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    <dependencyManagement>
+        <dependencies>
+            <!-- com.composum.core.jslibs [skipped due to no exports] -->
+            <!-- com.composum.core.commons -->
+            <dependency>
+            	<groupId>com.composum.sling.core</groupId>
+            	<artifactId>composum-sling-core-commons</artifactId>
+            	<version>1.7.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- com.composum.core.console -->
+            <dependency>
+            	<groupId>com.composum.sling.core</groupId>
+            	<artifactId>composum-sling-core-console</artifactId>
+            	<version>1.7.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- com.composum.core.pckgmgr -->
+            <dependency>
+            	<groupId>com.composum.sling.core</groupId>
+            	<artifactId>composum-sling-package-manager</artifactId>
+            	<version>1.7.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- com.composum.core.usermgnt -->
+            <dependency>
+            	<groupId>com.composum.sling.core</groupId>
+            	<artifactId>composum-sling-user-management</artifactId>
+            	<version>1.7.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- com.fasterxml.jackson.core.jackson-annotations -->
+            <dependency>
+            	<groupId>com.fasterxml.jackson.core</groupId>
+            	<artifactId>jackson-annotations</artifactId>
+            	<version>2.8.7</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- com.fasterxml.jackson.core.jackson-core -->
+            <dependency>
+            	<groupId>com.fasterxml.jackson.core</groupId>
+            	<artifactId>jackson-core</artifactId>
+            	<version>2.8.7</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- com.fasterxml.jackson.core.jackson-databind -->
+            <dependency>
+            	<groupId>com.fasterxml.jackson.core</groupId>
+            	<artifactId>jackson-databind</artifactId>
+            	<version>2.8.7</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- com.google.guava -->
+            <dependency>
+            	<groupId>com.google.guava</groupId>
+            	<artifactId>guava</artifactId>
+            	<version>15.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.commons.codec -->
+            <dependency>
+            	<groupId>commons-codec</groupId>
+            	<artifactId>commons-codec</artifactId>
+            	<version>1.9</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.commons.collections -->
+            <dependency>
+            	<groupId>commons-collections</groupId>
+            	<artifactId>commons-collections</artifactId>
+            	<version>3.2.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.commons.fileupload -->
+            <dependency>
+            	<groupId>commons-fileupload</groupId>
+            	<artifactId>commons-fileupload</artifactId>
+            	<version>1.3.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.commons.io -->
+            <dependency>
+            	<groupId>commons-io</groupId>
+            	<artifactId>commons-io</artifactId>
+            	<version>2.5</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.commons.lang -->
+            <dependency>
+            	<groupId>commons-lang</groupId>
+            	<artifactId>commons-lang</artifactId>
+            	<version>2.6</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- de.messetat.sling.platform.sling-server -->
+            <dependency>
+            	<groupId>de.messetat.sling.platform</groupId>
+            	<artifactId>sling-server</artifactId>
+            	<version>11-SNAPSHOT</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- io.brinkmann.aem.maven.aem-maven-repository -->
+            <dependency>
+            	<groupId>io.brinkmann.aem.maven</groupId>
+            	<artifactId>aem-maven-repository</artifactId>
+            	<version>5</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- io.dropwizard.metrics.core -->
+            <dependency>
+            	<groupId>io.dropwizard.metrics</groupId>
+            	<artifactId>metrics-core</artifactId>
+            	<version>3.1.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- javax.mail -->
+            <dependency>
+            	<groupId>javax.mail</groupId>
+            	<artifactId>mail</artifactId>
+            	<version>1.4.7</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.aries.jmx.whiteboard [skipped due to no exports] -->
+            <!-- org.apache.aries.jmx.api -->
+            <dependency>
+            	<groupId>org.apache.aries.jmx</groupId>
+            	<artifactId>org.apache.aries.jmx.api</artifactId>
+            	<version>1.1.5</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.aries.jmx.core -->
+            <dependency>
+            	<groupId>org.apache.aries.jmx</groupId>
+            	<artifactId>org.apache.aries.jmx.core</artifactId>
+            	<version>1.1.7</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.aries.util -->
+            <dependency>
+            	<groupId>org.apache.aries</groupId>
+            	<artifactId>org.apache.aries.util</artifactId>
+            	<version>1.1.3</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.commons.collections4 -->
+            <dependency>
+            	<groupId>org.apache.commons</groupId>
+            	<artifactId>commons-collections4</artifactId>
+            	<version>4.1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.commons.lang3 -->
+            <dependency>
+            	<groupId>org.apache.commons</groupId>
+            	<artifactId>commons-lang3</artifactId>
+            	<version>3.5</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.commons.math -->
+            <dependency>
+            	<groupId>org.apache.commons</groupId>
+            	<artifactId>commons-math</artifactId>
+            	<version>2.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.felix.http.sslfilter [skipped due to no exports] -->
+            <!-- org.apache.felix.webconsole.plugins.ds [skipped due to no exports] -->
+            <!-- org.apache.felix.webconsole.plugins.event [skipped due to no exports] -->
+            <!-- org.apache.felix.webconsole.plugins.memoryusage [skipped due to no exports] -->
+            <!-- org.apache.felix.webconsole.plugins.obr [skipped due to no exports] -->
+            <!-- org.apache.felix.webconsole.plugins.packageadmin [skipped due to no exports] -->
+            <!-- org.apache.felix.bundlerepository -->
+            <dependency>
+            	<groupId>org.apache.felix</groupId>
+            	<artifactId>org.apache.felix.bundlerepository</artifactId>
+            	<version>1.6.4</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.felix.configadmin -->
+            <dependency>
+            	<groupId>org.apache.felix</groupId>
+            	<artifactId>org.apache.felix.configadmin</artifactId>
+            	<version>1.8.10</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.felix.eventadmin -->
+            <dependency>
+            	<groupId>org.apache.felix</groupId>
+            	<artifactId>org.apache.felix.eventadmin</artifactId>
+            	<version>1.4.8</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.felix.http.jetty -->
+            <dependency>
+            	<groupId>org.apache.felix</groupId>
+            	<artifactId>org.apache.felix.http.jetty</artifactId>
+            	<version>3.4.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.felix.http.servlet-api -->
+            <dependency>
+            	<groupId>org.apache.felix</groupId>
+            	<artifactId>org.apache.felix.http.servlet-api</artifactId>
+            	<version>1.1.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.felix.http.whiteboard -->
+            <dependency>
+            	<groupId>org.apache.felix</groupId>
+            	<artifactId>org.apache.felix.http.whiteboard</artifactId>
+            	<version>3.0.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.felix.inventory -->
+            <dependency>
+            	<groupId>org.apache.felix</groupId>
+            	<artifactId>org.apache.felix.inventory</artifactId>
+            	<version>1.0.4</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.felix.jaas -->
+            <dependency>
+            	<groupId>org.apache.felix</groupId>
+            	<artifactId>org.apache.felix.jaas</artifactId>
+            	<version>1.0.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.felix.metatype -->
+            <dependency>
+            	<groupId>org.apache.felix</groupId>
+            	<artifactId>org.apache.felix.metatype</artifactId>
+            	<version>1.1.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.felix.prefs -->
+            <dependency>
+            	<groupId>org.apache.felix</groupId>
+            	<artifactId>org.apache.felix.prefs</artifactId>
+            	<version>1.1.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.felix.scr -->
+            <dependency>
+            	<groupId>org.apache.felix</groupId>
+            	<artifactId>org.apache.felix.scr</artifactId>
+            	<version>2.0.8</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.felix.webconsole -->
+            <dependency>
+            	<groupId>org.apache.felix</groupId>
+            	<artifactId>org.apache.felix.webconsole</artifactId>
+            	<version>4.3.4</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.geronimo.bundles.commons-httpclient -->
+            <dependency>
+            	<groupId>org.apache.geronimo.bundles</groupId>
+            	<artifactId>commons-httpclient</artifactId>
+            	<version>3.1_1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.geronimo.bundles.jstl -->
+            <dependency>
+            	<groupId>org.apache.geronimo.bundles</groupId>
+            	<artifactId>jstl</artifactId>
+            	<version>1.2_1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.geronimo.specs.geronimo-atinject_1.0_spec -->
+            <dependency>
+            	<groupId>org.apache.geronimo.specs</groupId>
+            	<artifactId>geronimo-atinject_1.0_spec</artifactId>
+            	<version>1.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.httpcomponents.httpclient -->
+            <dependency>
+            	<groupId>org.apache.httpcomponents</groupId>
+            	<artifactId>fluent-hc</artifactId>
+            	<version>4.4.1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.httpcomponents.httpclient -->
+            <dependency>
+            	<groupId>org.apache.httpcomponents</groupId>
+            	<artifactId>httpclient-cache</artifactId>
+            	<version>4.4.1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.httpcomponents.httpclient -->
+            <dependency>
+            	<groupId>org.apache.httpcomponents</groupId>
+            	<artifactId>httpclient-osgi</artifactId>
+            	<version>4.4.1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.httpcomponents.httpclient -->
+            <dependency>
+            	<groupId>org.apache.httpcomponents</groupId>
+            	<artifactId>httpclient</artifactId>
+            	<version>4.4.1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.httpcomponents.httpcore -->
+            <dependency>
+            	<groupId>org.apache.httpcomponents</groupId>
+            	<artifactId>httpcore-nio</artifactId>
+            	<version>4.4.1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.httpcomponents.httpcore -->
+            <dependency>
+            	<groupId>org.apache.httpcomponents</groupId>
+            	<artifactId>httpcore-osgi</artifactId>
+            	<version>4.4.1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.httpcomponents.httpcore -->
+            <dependency>
+            	<groupId>org.apache.httpcomponents</groupId>
+            	<artifactId>httpcore</artifactId>
+            	<version>4.4.1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.httpcomponents.httpclient -->
+            <dependency>
+            	<groupId>org.apache.httpcomponents</groupId>
+            	<artifactId>httpmime</artifactId>
+            	<version>4.4.1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.jackrabbit.oak-segment-tar [skipped due to no exports] -->
+            <!-- org.apache.jackrabbit.vault -->
+            <dependency>
+            	<groupId>org.apache.jackrabbit.vault</groupId>
+            	<artifactId>org.apache.jackrabbit.vault</artifactId>
+            	<version>3.1.30</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.jackrabbit.jackrabbit-api -->
+            <dependency>
+            	<groupId>org.apache.jackrabbit</groupId>
+            	<artifactId>jackrabbit-api</artifactId>
+            	<version>2.14.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.jackrabbit.jackrabbit-data -->
+            <dependency>
+            	<groupId>org.apache.jackrabbit</groupId>
+            	<artifactId>jackrabbit-data</artifactId>
+            	<version>2.14.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.jackrabbit.jackrabbit-jcr-commons -->
+            <dependency>
+            	<groupId>org.apache.jackrabbit</groupId>
+            	<artifactId>jackrabbit-jcr-commons</artifactId>
+            	<version>2.14.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.jackrabbit.jackrabbit-jcr-rmi -->
+            <dependency>
+            	<groupId>org.apache.jackrabbit</groupId>
+            	<artifactId>jackrabbit-jcr-rmi</artifactId>
+            	<version>2.14.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.jcr.webdav -->
+            <dependency>
+            	<groupId>org.apache.jackrabbit</groupId>
+            	<artifactId>jackrabbit-jcr-server</artifactId>
+            	<version>2.14.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.jackrabbit.jackrabbit-spi-commons -->
+            <dependency>
+            	<groupId>org.apache.jackrabbit</groupId>
+            	<artifactId>jackrabbit-spi-commons</artifactId>
+            	<version>2.14.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.jackrabbit.jackrabbit-spi -->
+            <dependency>
+            	<groupId>org.apache.jackrabbit</groupId>
+            	<artifactId>jackrabbit-spi</artifactId>
+            	<version>2.14.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.jackrabbit.jackrabbit-webdav -->
+            <dependency>
+            	<groupId>org.apache.jackrabbit</groupId>
+            	<artifactId>jackrabbit-webdav</artifactId>
+            	<version>2.14.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.jackrabbit.oak-blob -->
+            <dependency>
+            	<groupId>org.apache.jackrabbit</groupId>
+            	<artifactId>oak-blob</artifactId>
+            	<version>1.6.1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.jackrabbit.oak-commons -->
+            <dependency>
+            	<groupId>org.apache.jackrabbit</groupId>
+            	<artifactId>oak-commons</artifactId>
+            	<version>1.6.1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.jackrabbit.oak-core -->
+            <dependency>
+            	<groupId>org.apache.jackrabbit</groupId>
+            	<artifactId>oak-core</artifactId>
+            	<version>1.6.1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.jackrabbit.oak-jcr -->
+            <dependency>
+            	<groupId>org.apache.jackrabbit</groupId>
+            	<artifactId>oak-jcr</artifactId>
+            	<version>1.6.1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.jackrabbit.oak-lucene -->
+            <dependency>
+            	<groupId>org.apache.jackrabbit</groupId>
+            	<artifactId>oak-lucene</artifactId>
+            	<version>1.6.1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.servicemix.bundles.rhino -->
+            <dependency>
+            	<groupId>org.apache.servicemix.bundles</groupId>
+            	<artifactId>org.apache.servicemix.bundles.rhino</artifactId>
+            	<version>1.7.7.1_1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.bundleresource.impl [skipped due to no exports] -->
+            <!-- org.apache.sling.commons.log.webconsole [skipped due to no exports] -->
+            <!-- org.apache.sling.discovery.oak [skipped due to no exports] -->
+            <!-- org.apache.sling.discovery.support [skipped due to no exports] -->
+            <!-- org.apache.sling.extensions.threaddump [skipped due to no exports] -->
+            <!-- org.apache.sling.extensions.webconsolebranding [skipped because it's a fragment] -->
+            <!-- org.apache.sling.extensions.webconsolesecurityprovider [skipped due to no exports] -->
+            <!-- org.apache.sling.fragment.transaction [skipped because it's a fragment] -->
+            <!-- org.apache.sling.fragment.ws [skipped because it's a fragment] -->
+            <!-- org.apache.sling.fragment.xml [skipped because it's a fragment] -->
+            <!-- org.apache.sling.fsresource [skipped due to no exports] -->
+            <!-- org.apache.sling.hc.core [skipped due to no exports] -->
+            <!-- org.apache.sling.hc.webconsole [skipped due to no exports] -->
+            <!-- org.apache.sling.installer.console [skipped due to no exports] -->
+            <!-- org.apache.sling.installer.provider.file [skipped due to no exports] -->
+            <!-- org.apache.sling.installer.provider.jcr [skipped due to no exports] -->
+            <!-- org.apache.sling.jcr.davex [skipped due to no exports] -->
+            <!-- org.apache.sling.jcr.oak.server [skipped due to no exports] -->
+            <!-- org.apache.sling.jcr.webconsole [skipped due to no exports] -->
+            <!-- org.apache.sling.launchpad.content [skipped due to no exports] -->
+            <!-- org.apache.sling.launchpad.installer [skipped due to no exports] -->
+            <!-- org.apache.sling.models.impl [skipped due to no exports] -->
+            <!-- org.apache.sling.resourceresolver [skipped due to no exports] -->
+            <!-- org.apache.sling.scripting.sightly.js.provider [skipped due to no exports] -->
+            <!-- org.apache.sling.scripting.sightly.models.provider [skipped due to no exports] -->
+            <!-- org.apache.sling.scripting.sightly.repl [skipped due to no exports] -->
+            <!-- org.apache.sling.servlets.get [skipped due to no exports] -->
+            <!-- org.apache.sling.validation.core [skipped due to no exports] -->
+            <!-- org.apache.sling.adapter -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.adapter</artifactId>
+            	<version>2.1.10</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.api -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.api</artifactId>
+            	<version>2.16.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.auth.core -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.auth.core</artifactId>
+            	<version>1.3.26</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.auth.form -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.auth.form</artifactId>
+            	<version>1.0.8</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.caconfig.api -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.caconfig.api</artifactId>
+            	<version>1.1.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.caconfig.impl -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.caconfig.impl</artifactId>
+            	<version>1.4.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.caconfig.spi -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.caconfig.spi</artifactId>
+            	<version>1.3.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.commons.classloader -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.commons.classloader</artifactId>
+            	<version>1.4.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.commons.compiler -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.commons.compiler</artifactId>
+            	<version>2.3.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.commons.fsclassloader -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.commons.fsclassloader</artifactId>
+            	<version>1.0.6</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.commons.johnzon -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.commons.johnzon</artifactId>
+            	<version>1.0.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.commons.log -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.commons.log</artifactId>
+            	<version>5.0.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.commons.logservice -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.commons.logservice</artifactId>
+            	<version>1.0.6</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.commons.metrics -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.commons.metrics</artifactId>
+            	<version>1.2.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.commons.mime -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.commons.mime</artifactId>
+            	<version>2.1.10</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.commons.osgi -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.commons.osgi</artifactId>
+            	<version>2.4.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.commons.scheduler -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.commons.scheduler</artifactId>
+            	<version>2.6.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.commons.threads -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.commons.threads</artifactId>
+            	<version>3.2.6</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.discovery.api -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.discovery.api</artifactId>
+            	<version>1.0.4</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.discovery.base -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.discovery.base</artifactId>
+            	<version>2.0.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.discovery.commons -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.discovery.commons</artifactId>
+            	<version>1.0.20</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.engine -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.engine</artifactId>
+            	<version>2.6.8</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.event.dea -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.event.dea</artifactId>
+            	<version>1.1.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.event -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.event</artifactId>
+            	<version>4.2.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.felix.webconsole -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.extensions.webconsolebranding</artifactId>
+            	<version>1.0.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.felix.framework -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.fragment.transaction</artifactId>
+            	<version>1.0.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.felix.framework -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.fragment.ws</artifactId>
+            	<version>1.0.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.felix.framework -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.fragment.xml</artifactId>
+            	<version>1.0.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.hc.api -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.hc.api</artifactId>
+            	<version>1.0.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.i18n -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.i18n</artifactId>
+            	<version>2.5.8</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.installer.core -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.installer.core</artifactId>
+            	<version>3.8.10</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.installer.factory.configuration -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.installer.factory.configuration</artifactId>
+            	<version>1.1.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.javax.activation -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.javax.activation</artifactId>
+            	<version>0.1.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.jcr.api -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.jcr.api</artifactId>
+            	<version>2.4.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.jcr.base -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.jcr.base</artifactId>
+            	<version>3.0.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.jcr.contentloader -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.jcr.contentloader</artifactId>
+            	<version>2.2.4</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.jcr.jackrabbit.accessmanager -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.jcr.jackrabbit.accessmanager</artifactId>
+            	<version>3.0.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.jcr.jackrabbit.usermanager -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.jcr.jackrabbit.usermanager</artifactId>
+            	<version>2.2.6</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.jcr.jcr-wrapper -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.jcr.jcr-wrapper</artifactId>
+            	<version>2.0.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.jcr.registration -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.jcr.registration</artifactId>
+            	<version>1.0.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.jcr.repoinit -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.jcr.repoinit</artifactId>
+            	<version>1.1.4</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.jcr.resource -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.jcr.resource</artifactId>
+            	<version>3.0.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.jcr.webdav -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.jcr.webdav</artifactId>
+            	<version>2.3.8</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.models.api -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.models.api</artifactId>
+            	<version>1.3.4</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.models.jacksonexporter -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.models.jacksonexporter</artifactId>
+            	<version>1.0.6</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.provisioning.model -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.provisioning.model</artifactId>
+            	<version>1.8.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.repoinit.parser -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.repoinit.parser</artifactId>
+            	<version>1.1.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.sample.slingshot -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.sample.slingshot</artifactId>
+            	<version>0.8.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.scripting.api -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.scripting.api</artifactId>
+            	<version>2.2.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.scripting.core -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.scripting.core</artifactId>
+            	<version>2.0.46</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.scripting.el-api -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.scripting.el-api</artifactId>
+            	<version>1.0.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.scripting.javascript -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.scripting.javascript</artifactId>
+            	<version>3.0.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.scripting.jsp-api -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.scripting.jsp-api</artifactId>
+            	<version>1.0.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.scripting.jsp.taglib -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.scripting.jsp.taglib</artifactId>
+            	<version>2.2.6</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.scripting.jsp -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.scripting.jsp</artifactId>
+            	<version>2.3.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.scripting.sightly.compiler.java -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.scripting.sightly.compiler.java</artifactId>
+            	<version>1.0.10</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.scripting.sightly.compiler -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.scripting.sightly.compiler</artifactId>
+            	<version>1.0.8</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.scripting.sightly -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.scripting.sightly</artifactId>
+            	<version>1.0.34</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.serviceusermapper -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.serviceusermapper</artifactId>
+            	<version>1.3.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.servlets.post -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.servlets.post</artifactId>
+            	<version>2.3.20</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.servlets.resolver -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.servlets.resolver</artifactId>
+            	<version>2.4.12</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.settings -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.settings</artifactId>
+            	<version>1.3.8</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.validation.api -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.validation.api</artifactId>
+            	<version>1.0.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.xss -->
+            <dependency>
+            	<groupId>org.apache.sling</groupId>
+            	<artifactId>org.apache.sling.xss</artifactId>
+            	<version>2.0.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.tika.bundle -->
+            <dependency>
+            	<groupId>org.apache.tika</groupId>
+            	<artifactId>tika-bundle</artifactId>
+            	<version>1.14</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.tika.core -->
+            <dependency>
+            	<groupId>org.apache.tika</groupId>
+            	<artifactId>tika-core</artifactId>
+            	<version>1.14</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.tika.bundle -->
+            <dependency>
+            	<groupId>org.apache.tika</groupId>
+            	<artifactId>tika-parsers</artifactId>
+            	<version>1.14</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.xss -->
+            <dependency>
+            	<groupId>org.owasp.antisamy</groupId>
+            	<artifactId>antisamy</artifactId>
+            	<version>1.5.2</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.xss -->
+            <dependency>
+            	<groupId>org.owasp.encoder</groupId>
+            	<artifactId>encoder</artifactId>
+            	<version>1.1.1</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- org.apache.sling.scripting.jsp.taglib -->
+            <dependency>
+            	<groupId>org.owasp.esapi</groupId>
+            	<artifactId>esapi</artifactId>
+            	<version>2.1.0</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- jcl.over.slf4j -->
+            <dependency>
+            	<groupId>org.slf4j</groupId>
+            	<artifactId>jcl-over-slf4j</artifactId>
+            	<version>1.7.21</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- log4j.over.slf4j -->
+            <dependency>
+            	<groupId>org.slf4j</groupId>
+            	<artifactId>log4j-over-slf4j</artifactId>
+            	<version>1.7.21</version>
+            	<scope>provided</scope>
+            </dependency>
+            <!-- slf4j.api -->
+            <dependency>
+            	<groupId>org.slf4j</groupId>
+            	<artifactId>slf4j-api</artifactId>
+            	<version>1.7.21</version>
+            	<scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
