@@ -7,6 +7,16 @@ Table of contents
         * [Local](#local)
 <!--te-->
 
+```
+Profile Id: list-profiles (Active: true , Source: pom)
+Profile Id: sling-parent (Active: false , Source: pom)
+Profile Id: startServer (Active: false , Source: pom)
+Profile Id: sling-parent-dependencyManagement (Active: false , Source: pom)
+Profile Id: deployPackage (Active: false , Source: pom)
+Profile Id: generate-dependency-overview (Active: false , Source: pom)
+Profile Id: checkstyle (Active: false , Source: pom)
+Profile Id: sling-packages (Active: false , Source: pom)
+```
 
 Installation
 ============

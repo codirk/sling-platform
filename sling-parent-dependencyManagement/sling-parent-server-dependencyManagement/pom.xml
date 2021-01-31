@@ -9,7 +9,7 @@
         <version>11-SNAPSHOT</version>
     </parent>
 
-    <artifactId>sling-parent-server-dependencies</artifactId>
+    <artifactId>sling-parent-server-dependencyManagement</artifactId>
 
     <packaging>pom</packaging>
     <dependencyManagement>

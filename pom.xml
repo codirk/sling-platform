@@ -77,17 +77,17 @@
         <pluginManagement>
             <plugins>
                 <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <extensions>true</extensions>
-                <configuration>
-                    <instructions>
-                        <Bundle-Category>Messetat</Bundle-Category>
-                        <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
-                        <!--Bundle-DocURL>https://docs.messetat.de</Bundle-DocURL-->
-                        <Bundle-Vendor>Messetat</Bundle-Vendor>
-                    </instructions>
-                </configuration>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-bundle-plugin</artifactId>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <instructions>
+                            <Bundle-Category>Messetat</Bundle-Category>
+                            <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
+                            <!--Bundle-DocURL>https://docs.messetat.de</Bundle-DocURL-->
+                            <Bundle-Vendor>Messetat</Bundle-Vendor>
+                        </instructions>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.felix</groupId>

@@ -15,6 +15,10 @@
 
     <packaging>pom</packaging>
 
+    <modules>
+        <module>sling-parent-dependencies</module>
+    </modules>
+
     <build>
         <pluginManagement>
             <plugins>
@@ -130,18 +134,26 @@
 
             <dependency>
                 <groupId>de.messetat.sling.platform</groupId>
-                <artifactId>sling-parent-platform-dependencies</artifactId>
+                <artifactId>sling-parent-platform-dependencyManagement</artifactId>
                 <version>11-SNAPSHOT</version>
-<!--
-                <version>${project.version}</version>
--->
+                <!--<version>${project.version}</version>-->
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
 
             <dependency>
                 <groupId>de.messetat.sling.platform</groupId>
-                <artifactId>sling-parent-server-dependencies</artifactId>
+                <artifactId>sling-parent-server-dependencyManagement</artifactId>
+                <version>11-SNAPSHOT</version>
+                <!--
+                   <version>${project.version}</version>
+   -->
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>de.messetat.sling.platform</groupId>
+                <artifactId>sling-parent-test-dependencyManagement</artifactId>
                 <version>11-SNAPSHOT</version>
                 <!--
                    <version>${project.version}</version>
@@ -154,8 +166,5 @@
     </dependencyManagement>
 
 
-    <modules>
-        <module>sling-parent-dependencies</module>
-    </modules>
 
 </project>

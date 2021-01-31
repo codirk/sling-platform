@@ -9,12 +9,35 @@
         <version>11-SNAPSHOT</version>
     </parent>
 
-    <artifactId>sling-parent-platform-dependencies</artifactId>
+    <artifactId>sling-parent-platform-dependencyManagement</artifactId>
 
 
     <packaging>pom</packaging>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>javax.inject</groupId>
+                <artifactId>javax.inject</artifactId>
+                <version>1</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.jcr</groupId>
+                <artifactId>jcr</artifactId>
+                <version>2.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <!--
+                <artifactId>servlet-api</artifactId>
+                    javax.servlet-api version 3.0.1 has annotation folder which contains different annotation classes where
+                    servlet-api version 2.5 or below (i.e version 2.4) does not contain annotation.
+                -->
+                <version>3.1.0</version>
+                <scope>provided</scope>
+            </dependency>
+
             <dependency>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>org.apache.sling.tracer</artifactId>
@@ -22,25 +45,18 @@
                 <!-- this is needed for aem sync-->
                 <!--aem version>1.0.2</version-->
             </dependency>
-
             <dependency>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>org.apache.sling.pipes</artifactId>
                 <version>2.0.2</version>
                 <scope>provided</scope>
             </dependency>
-
             <dependency>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>org.apache.sling.query</artifactId>
                 <version>4.0.2</version>
                 <scope>provided</scope>
             </dependency>
-
-			<!--
-			<scope>provided</scope> ???
-			-->
-
             <dependency>
                 <!--
                 org.apache.sling.servlets.compat.impl.JsonQueryServlet
@@ -54,6 +70,21 @@
                 <groupId>org.apache.sling</groupId>
                 <artifactId>org.apache.sling.commons.json</artifactId>
                 <version>2.0.20</version>
+            </dependency>
+            <dependency>
+                <!-- The only required bundle is org.apache.sling.hc.core which provides
+                    the API, some utility classes and some generally useful HealthCheck services. -->
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.hc.core</artifactId>
+                <version>1.2.4</version>
+            </dependency>
+            <!-- TODO org.apache.sling.hc.support provides more Sling-specific HealthCheck
+                services. -->
+            <dependency>
+                <!-- maybe to an packge /install -->
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.hc.webconsole</artifactId>
+                <version>1.1.2</version>
             </dependency>
 
             <dependency>
@@ -93,23 +124,7 @@
             -->
 
 
-            <!-- see https://sling.apache.org/documentation/bundles/sling-health-check-tool.html -->
-            <dependency>
-                <!-- The only required bundle is org.apache.sling.hc.core which provides
-                    the API, some utility classes and some generally useful HealthCheck services. -->
-                <groupId>org.apache.sling</groupId>
-                <artifactId>org.apache.sling.hc.core</artifactId>
-                <version>1.2.4</version>
-            </dependency>
 
-            <!-- TODO org.apache.sling.hc.support provides more Sling-specific HealthCheck
-                services. -->
-            <dependency>
-                <!-- maybe to an packge /install -->
-                <groupId>org.apache.sling</groupId>
-                <artifactId>org.apache.sling.hc.webconsole</artifactId>
-                <version>1.1.2</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

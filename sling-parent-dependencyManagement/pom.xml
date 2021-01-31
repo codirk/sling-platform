@@ -15,8 +15,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>sling-parent-server-dependencies</module>
-        <module>sling-parent-platform-dependencies</module>
+        <module>sling-parent-server-dependencyManagement</module>
+        <module>sling-parent-platform-dependencyManagement</module>
+        <module>sling-parent-test-dependencyManagement</module>
     </modules>
 
 </project>
