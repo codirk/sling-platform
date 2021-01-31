@@ -2,50 +2,61 @@ Table of contents
 =================
 
 <!--ts-->
-   * [Server Start](#server-start)
-   * [Installation](#installation)
-        * [Local](#local)
+* [Requirements](#requirements)
+* [Setup](#setup)
+  * [Clone Repositories](#local)
+  * [Prepare Maven](#local)
+  * [Start Server](#local)
+  * [Deploy platform bundles](#local)
+  * [Deploy platform software](#local)
+
 <!--te-->
 
-```
-Profile Id: list-profiles (Active: true , Source: pom)
-Profile Id: sling-parent (Active: false , Source: pom)
-Profile Id: startServer (Active: false , Source: pom)
-Profile Id: sling-parent-dependencyManagement (Active: false , Source: pom)
-Profile Id: deployPackage (Active: false , Source: pom)
-Profile Id: generate-dependency-overview (Active: false , Source: pom)
-Profile Id: checkstyle (Active: false , Source: pom)
-Profile Id: sling-packages (Active: false , Source: pom)
-```
+# Requirements
+* maven 3.5
+* git
+* java >= 1.8
 
-Installation
-============
-Local
------
-* Start vanilla sling server
+# Setup
+## clone repositories
 ```shell
-$ mvn -PstartServer
+git clone tbd/sling-platform
+git clone tbd/sling-digital-asset-management
 ```
-* Check if all bundles are up and running
-    * [http://localhost:8080/system/console/bundles/sling.messetat.de.sling-server](#http://localhost:8080/system/console/bundles/sling.messetat.de.sling-server)
-* build parent
+## Prepare maven
 ```shell
-$ mvn mvn -P buildParent
+cd sling-platform
+mvn -P sling-parent
 ```
-* Deploy Platform
+## Start server
 ```shell
-$ mvn mvn -P deployPackage
+mvn -P startServer,sling9
 ```
-
-
-Update sling dependency list
-============================
-* Get the current dependency list
-
-
-Optional
-============================
-* (Optional) Deploy additional packages
+## Deploy platform bundles
 ```shell
-$ mvn TBD
+mvn -P deployPackage
 ```
+## Deploy software
+```shell
+cd tbd/sling-digital-asset-management
+mvn -P deployPackage
+```
+
+# Profiles
+## Profile Id: list-profiles (Active: true , Source: pom)
+List all profiles when calling mvn without any goals/targets/profiles
+## Profile Id: sling-parent (Active: false , Source: pom)
+Builds the parent pom which is used by the project
+## Profile Id: startServer (Active: false , Source: pom)
+Starts a server instance. User _clean install_ to get a vanilla version of the server.
+You have to add one of the following profile sling9,sling10 or sling11
+## Profile Id: sling-parent-dependencyManagement (Active: false , Source: pom)
+Will be called by _sling-parent_
+## Profile Id: deployPackage (Active: false , Source: pom)
+Deploys all plattform stuff to the server instance
+## Profile Id: generate-dependency-overview (Active: false , Source: pom)
+Generates an overview of all dependencies and dependencyManagement as HTML table
+## Profile Id: checkstyle (Active: false , Source: pom)
+For all pedants ;-)
+## Profile Id: sling-packages (Active: false , Source: pom)
+Will be called by _deployPackage_

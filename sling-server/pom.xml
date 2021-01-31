@@ -150,7 +150,10 @@
                         <artifactId>maven-antrun-plugin</artifactId>
                         <executions>
                             <execution>
-                                <phase>package</phase>
+                                <phase>none</phase>
+                                <!-- The proxy servlet for the package manager is disabled for the moment
+                                    <phase>package</phase>
+                                -->
                                 <goals>
                                     <goal>run</goal>
                                 </goals>
@@ -238,9 +241,9 @@
                                 </goals>
                                 <configuration>
                                     <failOnError>false</failOnError>
-                                    <!--url>
+                                    <!--
                                         http://localhost:${http.port}/bin/maven/dependencies.xml?groupId=sling.messetat.de&amp;artifactId=sling-parent-server-dependencies&amp;version=${version}
-                                    </url-->
+                                    -->
                                     <url>
                                         http://localhost:${http.port}/bin/maven/dependencies.xml
                                     </url>

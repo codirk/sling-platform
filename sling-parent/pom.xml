@@ -88,7 +88,17 @@
                             <artifactId>content-package-maven-plugin</artifactId>
                             <version>1.0.2</version>
                             <configuration>
+                                <!--
+                                This is the default url
+                                <targetURL>http://localhost:4502/crx/packmgr/service.jsp</targetURL>
+
                                 <targetURL>http://${host}:${port}/crx/packmgr/service.jsp</targetURL>
+
+                                This is the composum url
+                                <targetURL>http://${host}:${port}/bin/cpm/package.service.html</targetURL>
+                                -->
+                                <targetURL>http://${host}:${port}/bin/cpm/package.service.html</targetURL>
+
                                 <failOnError>true</failOnError>
                                 <userId>admin</userId>
                                 <password>admin</password>

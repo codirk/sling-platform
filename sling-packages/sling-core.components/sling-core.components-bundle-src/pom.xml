@@ -5,9 +5,11 @@
 
     <parent>
         <groupId>de.messetat.sling.platform.parent</groupId>
-        <artifactId>sling-parent-dependencies-src</artifactId>
         <version>11-SNAPSHOT</version>
+        <artifactId>sling-parent-dependencies-scr</artifactId>
+<!--
         <relativePath>../../../sling-parent/sling-parent-dependencies/sling-parent-dependencies-scr</relativePath>
+    -->
     </parent>
 
     <groupId>de.messetat.sling.core.components</groupId>
