@@ -250,6 +250,7 @@
             </dependencies>
         </profile>
 
+        <!--
         <profile>
             <id>sling-parent-dependencyManagement</id>
             <modules>
@@ -257,20 +258,6 @@
             </modules>
         </profile>
 
-        <profile>
-            <id>sling-parent</id>
-            <modules>
-                <module>sling-parent-dependencyManagement</module>
-                <module>sling-parent</module>
-            </modules>
-        </profile>
-
-        <profile>
-            <id>deployPackage</id>
-            <modules>
-                <module>sling-packages</module>
-            </modules>
-        </profile>
 
         <profile>
             <id>sling-packages</id>
@@ -279,7 +266,8 @@
             </modules>
         </profile>
 
-        <profile>
+
+         <profile>
             <id>startServer</id>
             <build>
                 <plugins>
@@ -305,12 +293,34 @@
                     </plugin>
                 </plugins>
             </build>
-
             <modules>
                 <module>sling-server</module>
             </modules>
         </profile>
 
+-->
+        <profile>
+            <id>sling-parent</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <modules>
+                <module>sling-parent-dependencyManagement</module>
+                <module>sling-parent</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>deployPackage</id>
+            <build>
+                <defaultGoal>
+                    clean install
+                </defaultGoal>
+            </build>
+            <modules>
+                <module>sling-packages</module>
+            </modules>
+        </profile>
 
         <profile>
             <id>checkstyle</id>

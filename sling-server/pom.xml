@@ -111,7 +111,7 @@
         <profile>
             <id>sling10</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <sling-server.version>10</sling-server.version>
@@ -142,7 +142,7 @@
         <profile>
             <id>startServer</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <build>
                 <plugins>
