@@ -38,6 +38,14 @@
                 <scope>provided</scope>
             </dependency>
 
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-imaging</artifactId>
+                <version>1.0-alpha2</version>
+                <scope>provided</scope>
+            </dependency>
+
             <dependency>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>org.apache.sling.tracer</artifactId>

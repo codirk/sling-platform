@@ -49,7 +49,17 @@
         </plugins>
     </build>
 
+
     <dependencies>
+        <!--
+        Add all of this dependencies to:
+            sling-platform/sling-parent-dependencyManagement/sling-parent-platform-dependencyManagement/pom.xml
+            sling-parent/sling-parent-dependencies/pom.xml
+        -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-imaging</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.sling</groupId>
@@ -60,8 +70,6 @@
             <!-- this is needed for aem sync-->
             <!--aem version>1.0.2</version-->
         </dependency>
-
-
 
 
         <dependency>
