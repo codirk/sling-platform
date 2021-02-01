@@ -30,12 +30,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <plugin>
-                <groupId>org.apache.sling</groupId>
-                <artifactId>maven-sling-plugin</artifactId>
-            </plugin>
-
         </plugins>
     </build>
 
