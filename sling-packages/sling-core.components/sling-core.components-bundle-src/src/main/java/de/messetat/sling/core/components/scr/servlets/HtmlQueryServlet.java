@@ -1,15 +1,7 @@
-package de.messetat.sling.core.components.servlets;
+package de.messetat.sling.core.components.scr.servlets;
 
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import javax.servlet.Servlet;
-import javax.servlet.ServletException;
-
-import de.messetat.sling.core.components.services.RenderServiceImpl;
+import de.messetat.sling.core.components.scr.services.RenderServiceImpl;
 import org.apache.felix.scr.annotations.*;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
@@ -19,6 +11,14 @@ import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
 import org.apache.sling.engine.SlingRequestProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.servlet.Servlet;
+import javax.servlet.ServletException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 @Component
 @Service({Servlet.class})

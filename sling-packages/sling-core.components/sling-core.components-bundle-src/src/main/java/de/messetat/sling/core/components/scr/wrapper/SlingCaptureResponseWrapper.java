@@ -1,4 +1,4 @@
-package de.messetat.sling.core.components.wrapper;
+package de.messetat.sling.core.components.scr.wrapper;
 
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.wrappers.SlingHttpServletResponseWrapper;

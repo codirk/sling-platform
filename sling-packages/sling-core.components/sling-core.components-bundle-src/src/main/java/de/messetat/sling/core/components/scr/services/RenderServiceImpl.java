@@ -1,4 +1,4 @@
-package de.messetat.sling.core.components.services;
+package de.messetat.sling.core.components.scr.services;
 
 import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.api.SlingHttpServletRequest;
