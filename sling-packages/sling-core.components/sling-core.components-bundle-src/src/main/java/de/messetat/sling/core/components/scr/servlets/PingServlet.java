@@ -20,7 +20,7 @@ import java.io.IOException;
                 ServletResolverConstants.DEFAULT_RESOURCE_TYPE
         },
         extensions = {"ping"})
-public class TestServlet extends SlingSafeMethodsServlet {
+public class PingServlet extends SlingSafeMethodsServlet {
 
     private static final long serialVersionUID = 1L;
 
