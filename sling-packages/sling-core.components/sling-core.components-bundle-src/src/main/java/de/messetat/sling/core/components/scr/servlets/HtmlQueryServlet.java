@@ -20,6 +20,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+/**
+ *
+ * https://jar-download.com/artifacts/org.apache.sling/org.apache.sling.servlets.compat/1.0.2/source-code/org/apache/sling/servlets/compat/impl/JsonQueryServlet.java
+ *
+ */
 @Component
 @Service({Servlet.class})
 @Properties({@Property(

@@ -52,6 +52,14 @@
 
     <dependencies>
         <!--
+        TODO
+        <dependency>
+            <groupId>org.jdeferred.v2</groupId>
+            <artifactId>jdeferred-core</artifactId>
+            <version>${version}</version>
+        </dependency>
+        -->
+        <!--
         Add all of this dependencies to:
             sling-platform/sling-parent-dependencyManagement/sling-parent-platform-dependencyManagement/pom.xml
             sling-parent/sling-parent-dependencies/pom.xml
