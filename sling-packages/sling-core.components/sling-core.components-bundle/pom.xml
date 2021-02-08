@@ -4,7 +4,6 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-
     <parent>
         <groupId>de.messetat.sling.platform.parent</groupId>
         <artifactId>sling-parent-dependencies-osgi</artifactId>
