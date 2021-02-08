@@ -47,6 +47,12 @@
             </dependency>
 
             <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpasyncclient</artifactId>
+                <version>4.1.4</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>org.apache.sling.tracer</artifactId>
                 <version>1.0.6</version>

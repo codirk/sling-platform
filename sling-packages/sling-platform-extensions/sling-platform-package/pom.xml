@@ -56,6 +56,27 @@
                             <target>/apps/${artifactId}/install</target>
                         </embedded>
 
+
+                        <embedded>
+                            <groupId>org.apache.sling</groupId>
+                            <artifactId>org.apache.sling.distribution.api</artifactId>
+                            <target>/apps/${artifactId}/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>org.apache.sling</groupId>
+                            <artifactId>org.apache.sling.distribution.core</artifactId>
+                            <target>/apps/${artifactId}/install</target>
+                        </embedded>
+                        <!--embedded>
+                            <groupId>org.apache.sling</groupId>
+                            <artifactId>org.apache.sling.distribution.sample</artifactId>
+                            <target>/apps/${artifactId}/install</target>
+                        </embedded-->
+                        <embedded>
+                            <groupId>org.apache.sling</groupId>
+                            <artifactId>org.apache.sling.query</artifactId>
+                            <target>/apps/${artifactId}/install</target>
+                        </embedded>
                         <embedded>
                             <groupId>org.apache.sling</groupId>
                             <artifactId>org.apache.sling.pipes</artifactId>
@@ -96,8 +117,31 @@
 
         <dependency>
             <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.distribution.api</artifactId>
+            <version>0.3.0</version>
+            <!--            <version>0.4.0</version>-->
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.distribution.core</artifactId>
+<!--            <version>0.4.2</version>-->
+            <version>0.3.4</version>
+        </dependency>
+        <!--dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.distribution.sample</artifactId>
+            <version>0.1.6</version>
+        </dependency-->
+
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.query</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.pipes</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.servlets.compat</artifactId>
