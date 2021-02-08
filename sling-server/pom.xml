@@ -16,7 +16,7 @@
 
     <properties>
         <http.port>8080</http.port>
-        <debugport>30303</debugport>
+        <debugport>5005</debugport>
 
         <sling-server.version>10</sling-server.version>
     </properties>
