@@ -3,4 +3,10 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 pushd $DIR
 
-tail -f target/quickstart/sling/logs/error.log
+
+logfilename=$(basename -- "$0")
+logfilename="${logfilename%.*}"
+logfilename="${logfilename##tail.}"
+
+echo $logfilename
+tail -f target/quickstart/sling/logs/$logfilename
