@@ -6,8 +6,8 @@
 
     <parent>
         <groupId>de.messetat.sling.platform.parent</groupId>
-        <version>11-SNAPSHOT</version>
-        <artifactId>sling-parent-dependencies-osgi</artifactId>
+        <version>10-SNAPSHOT</version>
+        <artifactId>sling-parent-dependencies-scr</artifactId>
     </parent>
 
     <artifactId>sling-parent-scr</artifactId>
@@ -19,13 +19,13 @@
         <dependency>
             <groupId>de.messetat.sling.core.components</groupId>
             <artifactId>sling-core.components-bundle</artifactId>
-            <version>11-SNAPSHOT</version>
+            <version>10-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>de.messetat.sling.core.components</groupId>
             <artifactId>sling-core.components-bundle-src</artifactId>
-            <version>11-SNAPSHOT</version>
+            <version>10-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

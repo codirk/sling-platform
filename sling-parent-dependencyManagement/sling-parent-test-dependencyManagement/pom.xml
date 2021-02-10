@@ -6,7 +6,7 @@
     <parent>
         <groupId>de.messetat.sling.platform</groupId>
         <artifactId>sling-parent-dependencyManagement</artifactId>
-        <version>11-SNAPSHOT</version>
+        <version>10-SNAPSHOT</version>
     </parent>
 
     <artifactId>sling-parent-test-dependencyManagement</artifactId>

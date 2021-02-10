@@ -12,7 +12,7 @@
 
     <groupId>de.messetat.sling.platform</groupId>
     <artifactId>sling-platform</artifactId>
-    <version>11-SNAPSHOT</version>
+    <version>10-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
@@ -145,6 +145,20 @@
             <modules>
                 <module>sling-parent-dependencyManagement</module>
                 <module>sling-parent</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>sling-platform</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <modules>
+                <module>sling-parent-dependencyManagement</module>
+                <module>sling-parent</module>
+                <module>sling-packages</module>
+                <module>sling-parent/sling-parent-dependencies/sling-parent-dependencies-sling/sling-parent-dependencies-test/sling-parent-dependencies-osgi/sling-parent-osgi</module>
+                <module>sling-parent/sling-parent-dependencies/sling-parent-dependencies-sling/sling-parent-dependencies-test/sling-parent-dependencies-scr/sling-parent-scr</module>
             </modules>
         </profile>
 

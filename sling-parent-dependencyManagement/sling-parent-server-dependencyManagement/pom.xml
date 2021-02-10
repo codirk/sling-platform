@@ -6,7 +6,7 @@
     <parent>
         <groupId>de.messetat.sling.platform</groupId>
         <artifactId>sling-parent-dependencyManagement</artifactId>
-        <version>11-SNAPSHOT</version>
+        <version>10-SNAPSHOT</version>
     </parent>
 
     <artifactId>sling-parent-server-dependencyManagement</artifactId>
@@ -110,7 +110,7 @@
             <dependency>
                 <groupId>de.messetat.sling.platform</groupId>
                 <artifactId>sling-server</artifactId>
-                <version>11-SNAPSHOT</version>
+                <version>10-SNAPSHOT</version>
                 <scope>provided</scope>
             </dependency>
             <!-- io.brinkmann.aem.maven.aem-maven-repository -->

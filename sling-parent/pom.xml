@@ -7,7 +7,7 @@
     <parent>
         <groupId>de.messetat.sling.platform</groupId>
         <artifactId>sling-platform</artifactId>
-        <version>11-SNAPSHOT</version>
+        <version>10-SNAPSHOT</version>
     </parent>
 
     <groupId>de.messetat.sling.platform.parent</groupId>
@@ -246,7 +246,7 @@
             <dependency>
                 <groupId>de.messetat.sling.platform</groupId>
                 <artifactId>sling-parent-platform-dependencyManagement</artifactId>
-                <version>11-SNAPSHOT</version>
+                <version>10-SNAPSHOT</version>
                 <!--<version>${project.version}</version>-->
                 <scope>import</scope>
                 <type>pom</type>
@@ -255,7 +255,7 @@
             <dependency>
                 <groupId>de.messetat.sling.platform</groupId>
                 <artifactId>sling-parent-server-dependencyManagement</artifactId>
-                <version>11-SNAPSHOT</version>
+                <version>10-SNAPSHOT</version>
                 <!--
                    <version>${project.version}</version>
    -->
@@ -265,7 +265,7 @@
             <dependency>
                 <groupId>de.messetat.sling.platform</groupId>
                 <artifactId>sling-parent-test-dependencyManagement</artifactId>
-                <version>11-SNAPSHOT</version>
+                <version>10-SNAPSHOT</version>
                 <!--
                    <version>${project.version}</version>
                  -->

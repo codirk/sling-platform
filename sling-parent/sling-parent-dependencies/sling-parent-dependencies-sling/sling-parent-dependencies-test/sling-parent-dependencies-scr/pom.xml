@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>de.messetat.sling.platform.parent</groupId>
-        <version>11-SNAPSHOT</version>
+        <version>10-SNAPSHOT</version>
 
         <artifactId>sling-parent-dependencies-test</artifactId>
     </parent>
@@ -15,9 +15,11 @@
 
     <packaging>pom</packaging>
 
+    <!--
     <modules>
         <module>sling-parent-scr</module>
     </modules>
+    -->
 
     <build>
         <plugins>
