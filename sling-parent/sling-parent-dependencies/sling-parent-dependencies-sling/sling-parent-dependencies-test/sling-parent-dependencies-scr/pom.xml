@@ -14,6 +14,11 @@
     <artifactId>sling-parent-dependencies-scr</artifactId>
 
     <packaging>pom</packaging>
+
+    <modules>
+        <module>sling-parent-scr</module>
+    </modules>
+
     <build>
         <plugins>
             <plugin>
