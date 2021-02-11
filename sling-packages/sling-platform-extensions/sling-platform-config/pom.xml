@@ -8,8 +8,9 @@
         <groupId>de.messetat.sling.platform.parent</groupId>
         <artifactId>sling-parent</artifactId>
         <version>10-SNAPSHOT</version>
+        <relativePath>../../../sling-parent</relativePath>
     </parent>
-
+    <groupId>de.messetat.sling.platform</groupId>
     <artifactId>sling-platform-config</artifactId>
 
     <packaging>content-package</packaging>
