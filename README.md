@@ -30,7 +30,7 @@ mvn -P sling-parent
 ```
 ## Start server
 ```shell
-mvn -P startServer,sling9
+mvn -P startServer,sling11
 ```
 ## Deploy platform bundles
 ```shell
