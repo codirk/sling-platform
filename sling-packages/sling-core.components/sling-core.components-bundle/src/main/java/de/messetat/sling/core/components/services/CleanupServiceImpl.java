@@ -5,6 +5,7 @@ import javax.jcr.Session;
 
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.metatype.annotations.AttributeDefinition;
 import org.osgi.service.metatype.annotations.Designate;
 import org.osgi.service.component.annotations.Reference;
@@ -13,7 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.apache.sling.jcr.api.SlingRepository;
 
-@Component(service = Runnable.class, immediate = true)
+@Component(service = Runnable.class, immediate = true, configurationPolicy = ConfigurationPolicy.REQUIRE)
 @Designate(ocd = CleanupServiceImpl.Config.class)
 public class CleanupServiceImpl implements Runnable {
 
