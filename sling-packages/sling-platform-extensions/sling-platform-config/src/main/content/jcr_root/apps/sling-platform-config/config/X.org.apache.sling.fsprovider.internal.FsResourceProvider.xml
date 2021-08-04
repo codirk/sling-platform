@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" jcr:primaryType="sling:OsgiConfig"
+          provider.root="/content"
+          provider.file="/path/to/fsvault"
+          provider.checkinterval="1000"
+          provider.fs.mode="FILEVAULT_XML"
+          provider.filevault.filterxml.path="/path/to/fsvault/META-INF/vault/filter.xml"
+/>
+
+
+<!--
+          provider.fs.mode="FILES_FOLDERS"
+          provider.fs.mode="INITIAL_CONTENT"
+          provider.fs.mode="FILEVAULT_XML"
+
+
+http://localhost:8080/system/console/configMgr/org.apache.sling.fsprovider.internal.FsResourceProvider
+
+-->

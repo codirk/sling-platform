@@ -165,6 +165,46 @@
 
         <profile>
             <id>deployPackage</id>
+            <properties>
+                <protocol>http</protocol>
+                <host>localhost</host>
+                <port>8080</port>
+                <userId>admin</userId>
+                <password>admin</password>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>io.wcm.maven.plugins</groupId>
+                        <artifactId>wcmio-content-package-maven-plugin</artifactId>
+                        <version>1.8.4</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                                <configuration>
+                                    <skip>false</skip>
+                                    <serviceURL>${protocol}://${host}:${port}/bin/cpm/package.service.html</serviceURL>
+                                    <userId>${userId}</userId>
+                                    <password>${password}</password>
+                                </configuration>
+                            </execution>
+                        </executions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.apache.httpcomponents</groupId>
+                                <artifactId>httpclient</artifactId>
+                                <version>4.5</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>deployPackageDay</id>
             <build>
                 <pluginManagement>
                     <plugins>
@@ -226,6 +266,32 @@
                 </pluginRepository>
             </pluginRepositories>
         </profile>
+
+        <profile>
+            <id>list-profiles</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <defaultGoal>clean install</defaultGoal>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-help-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>list-profiles</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>all-profiles</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
     </profiles>
 
     <dependencyManagement>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" jcr:primaryType="sling:OsgiConfig"
+
+
+          fallbackPaths="[/conf/platform,/conf/global,/apps/conf,/libs/conf]"
+
+/>
+<!--
+    enabled="{Boolean}true"
+    configPath="/conf"
+    fallbackPaths="[/conf/global,/apps/conf,/libs/conf]"
+    configCollectionInheritancePropertyNames=""
+
+    http://localhost:8080/system/console/configMgr/org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy
+-->
