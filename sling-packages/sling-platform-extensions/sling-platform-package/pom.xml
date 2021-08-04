@@ -53,74 +53,16 @@
                     </properties-->
                     <embeddeds>
                         <embedded>
-                            <groupId>de.messetat.sling.platform</groupId>
-                            <artifactId>sling-platform-bundle</artifactId>
-                            <target>/apps/${artifactId}/install</target>
+                            <scope>compile</scope>
+                            <excludeTransitive>true</excludeTransitive>
                         </embedded>
-
-
-                        <embedded>
-                            <groupId>org.apache.sling</groupId>
-                            <artifactId>org.apache.sling.distribution.api</artifactId>
-                            <target>/apps/${artifactId}/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>org.apache.sling</groupId>
-                            <artifactId>org.apache.sling.distribution.core</artifactId>
-                            <target>/apps/${artifactId}/install</target>
-                        </embedded>
-                        <!--embedded>
-                            <groupId>org.apache.sling</groupId>
-                            <artifactId>org.apache.sling.distribution.sample</artifactId>
-                            <target>/apps/${artifactId}/install</target>
-                        </embedded-->
-                        <embedded>
-                            <groupId>org.apache.sling</groupId>
-                            <artifactId>org.apache.sling.query</artifactId>
-                            <target>/apps/${artifactId}/install</target>
-                        </embedded>
+                        <!--
                         <embedded>
                             <groupId>org.apache.sling</groupId>
                             <artifactId>org.apache.sling.pipes</artifactId>
                             <target>/apps/${artifactId}/install</target>
                         </embedded>
-                        <embedded>
-                            <groupId>org.apache.sling</groupId>
-                            <artifactId>org.apache.sling.servlets.compat</artifactId>
-                            <target>/apps/${artifactId}/install</target>
-                        </embedded>
-
-                        <embedded>
-                            <groupId>org.apache.sling</groupId>
-                            <artifactId>org.apache.sling.caconfig.api</artifactId>
-                            <target>/apps/${artifactId}/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>org.apache.sling</groupId>
-                            <artifactId>org.apache.sling.caconfig.spi</artifactId>
-                            <target>/apps/${artifactId}/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>org.apache.sling</groupId>
-                            <artifactId>org.apache.sling.caconfig.impl</artifactId>
-                            <target>/apps/${artifactId}/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>org.apache.sling</groupId>
-                            <artifactId>org.apache.sling.commons.johnzon</artifactId>
-                            <target>/apps/${artifactId}/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>org.eclipse.jgit</groupId>
-                            <artifactId>org.eclipse.jgit</artifactId>
-                            <target>/apps/${artifactId}/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>com.googlecode.javaewah</groupId>
-                            <artifactId>JavaEWAH</artifactId>
-                            <target>/apps/${artifactId}/install</target>
-                        </embedded>
-
+                        -->
                     </embeddeds>
                     <!--
                     <subPackages>
